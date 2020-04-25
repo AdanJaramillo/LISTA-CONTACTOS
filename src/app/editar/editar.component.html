@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Actualizar Contacto
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="nombre" item-start></ion-icon>
+          <ion-label position="floating">Nombre:</ion-label>
+          <ion-input name="nombre" [(ngModel)]="nombre" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Número:</ion-label>
+          <ion-input name="telefono" [(ngModel)]="telefono" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-item>
+            <ion-label position="floating">Fecha de nacimiento:</ion-label>
+            <ion-input name="fecha" [(ngModel)]="fecha" type="Date"></ion-input>
+          </ion-item>
+            <ion-label position="floating">Url Imagen:</ion-label>
+            <ion-input name="imagen" [(ngModel)]="imagen" type="text" ng-model-options="{allowInvalid: true}"></ion-input>
+          </ion-item>
+      </ion-list>
+      <ion-button (click)="actualizarContacto()">Actualizar</ion-button>
+    </form>
+  </ion-content>

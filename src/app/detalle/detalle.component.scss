@@ -1,0 +1,51 @@
+#editar {
+   width: 25px;
+   height: 25px;
+
+}
+#eliminar {
+    width: 25px;
+    height: 25px;
+}
+
+#contacto {
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+
+}
+#imagen {
+    margin-top: 10px;
+    text-align: center;
+    align-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+#header {
+    text-align: center;
+    align-content: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .right {
+    width: 50%;
+    display: inline-block;
+  }
+  .left {
+      display: inline-block;
+      width: 50%;
+  }
+  #tarjeta {
+      background-color: bisque;
+  }
+  #widthmax {
+      width: 100%;
+  }

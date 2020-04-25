@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de contactos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-list>
+    <ion-item-sliding #slidingItem *ngFor="let contacto of contactos | async">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="contacto.imagen"></ion-img>
+        </ion-thumbnail>
+        <ion-label> {{contacto.nombre}} </ion-label>
+        <ion-label> {{contacto.telefono}} </ion-label>
+        <ion-label> {{contacto.fecha}} </ion-label>
+      </ion-item>
+      <ion-item-options side="start" >
+          <ion-item-option [routerLink]= "['/detalle/', contacto.id]" routerLinkActive="router-link-active"  (click)="cerrarSlider(slidingItem)">
+              <ion-icon name="open"></ion-icon>
+          </ion-item-option>
+          
+        </ion-item-options>
+      <ion-item-options side="end">
+        <ion-item-option [routerLink]= "['/editar/', contacto.id]" routerLinkActive="router-link-active" (click)="cerrarSlider(slidingItem)">
+          <ion-icon name="create"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="eliminarContacto(slidingItem,contacto)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-item-option>
+
+      </ion-item-options>
+
+    </ion-item-sliding>
+    
+   </ion-list>
+</ion-content>

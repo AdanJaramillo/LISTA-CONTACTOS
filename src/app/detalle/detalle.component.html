@@ -1,0 +1,47 @@
+
+  <div id="contenedor">
+  <ion-card id="contacto" id="tarjeta">
+      <div id="header">
+          <img id="imagen" [src]="contacto.imagen" class="center">
+        </div>
+    <ion-card-header id="header">
+      
+      <ion-card-title>{{contacto.nombre}}</ion-card-title>
+
+    </ion-card-header>
+  
+    <ion-card-content id="header">
+        {{contacto.telefono}}
+    </ion-card-content>
+
+    <ion-card-content id="header">
+      {{contacto.fecha}}
+  </ion-card-content>
+  </ion-card>
+  
+  <ion-card  id="tarjeta">
+    <ion-buttons>
+      <ion-button class="left" slot="start" (click)="navegarEditar()">
+      
+        <ion-icon id="editar" slot="start" name="create">Editar</ion-icon>
+        <ion-label slot="start">Editar</ion-label>
+      
+  </ion-button>
+  <ion-button class="right" slot="end" (click)="eliminarContacto()">
+      <ion-icon id="eliminar" slot="end" name="trash"></ion-icon>
+      <ion-label slot="end">Eliminar</ion-label>
+   </ion-button>
+  </ion-buttons>
+  </ion-card>
+  <ion-card id="tarjeta" >
+     
+    <ion-button id="widthmax" (click)="navegarLista()">
+        
+      <ion-icon id="editar" name="list">Lista</ion-icon>
+      <ion-label slot="start">Lista</ion-label>
+        
+    </ion-button>
+  </ion-card>
+
+</div>
+  
